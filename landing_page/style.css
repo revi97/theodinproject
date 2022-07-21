@@ -1,0 +1,153 @@
+*{
+    font-family: roboto, sans-serif;
+    margin: 0;
+
+}
+
+body{
+    width: 100%;
+}
+.nav-bar{
+    background-color: #1f2937;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+.logo{
+    padding: 10px;
+    color: #f9faf8;
+    font-size: 24px;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    color: #e5e7eb;
+    
+}
+.nav-list>li{
+    justify-content: space-around;
+    margin: 10px;
+    padding: 5px 5px;
+    font-size: 18px;
+}
+
+.part-one{
+    background-color: #1f2937;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0 15%;
+    margin: 0;
+    align-items: center;
+    
+}
+.main-info{
+    padding-top: 40px;
+    margin: 0;
+   align-items: center;
+}
+.main-info>h1{
+    color: #f9faf8;
+    font-size: 48px;
+}
+.main-info>p{  
+    margin-top: 2em;
+    font-size: 18px;
+    color: #e5e7eb
+}
+.cta{
+    background-color: #3882f6;
+    color: #f9faf8;
+    border: none;
+    margin: 20px;
+    padding: 0.4rem;
+    margin-left:  0;
+    border-radius: 5px;
+}
+.main-image img{
+    width: 400px;
+    height: auto;
+    padding: 40px;
+}
+
+.part-two{
+    background-color: #f9faf8;
+   
+}
+.part-two>h2{
+    padding: 2em;
+    text-align: center;
+    font-weight: extra-bold;
+    font-size: 36px;
+    color:  #1f2937;
+}
+.ocean-images{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    margin-top: -100px;
+    padding: 0 15%;
+}
+.image-1{
+text-align: center;
+}
+.images{
+    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+
+/* Part three */
+
+.part-three{
+    background-color: #e5e7eb;
+    height: 400px;
+    text-align: center;
+}
+.quote-content{
+    padding: 200px;
+}
+.quote{
+    font-size: 36px;
+    font-weight: light italic;
+    color: #1f2937;
+}
+.quote-content>h3{
+    color: #1f2937;
+    text-align: right;
+    padding-right: 20%;
+}
+
+/* part Four */
+
+.part-four{
+    background-color: #f9faf8;
+    height: 300px;
+    padding: 40px;
+}
+.cta-info{
+    background-color: #3882f6;
+    border-radius: 5px;
+    padding: 15px 0;
+    margin: 0 28%;
+    display: flex;
+    justify-content: space-between;
+    color: #e5e7eb;
+}
+.details{
+    flex-direction: column;
+}
+.unsplash{
+    border: 1px solid #f9faf8;
+}
+
+.footer-class{
+    background-color: #1f2937;
+    padding: 30px;
+    text-align: center;
+    color: #e5e7eb;
+}
+
+
