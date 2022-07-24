@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+}
+.heading{
+    display: inline-flex;
+    
+}
+.heading>img{
+    width: 60px;
+    padding:5px 20px ;
+}
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons{
+    padding: 20px;
+}
+.images{
+    width: 80px;
+}
