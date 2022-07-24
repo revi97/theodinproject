@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+}
+b>a{
+    font-weight: 800;
+    text-decoration: none;
+    color:  #1f2937;
+}
+b>a:hover{
+    color:  #2761b1;
+    zoom: 150%;
+    text-decoration: underline;
+}
+.all-projects{
+    background-color:  #e5e7eb;
+    margin: 20px 30%;
+    border-radius: 20px;
+}
+.projects{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects a{
+    color: #e5e7eb;
+    background-color: #1f2937;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.projects a:hover{
+    color:  #1f2937;
+    background-color: #e5e7eb ;
+}
