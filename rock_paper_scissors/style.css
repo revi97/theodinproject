@@ -9,10 +9,23 @@ body{
     width: 60px;
     padding:5px 20px ;
 }
-.options{
+.all-options{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+.user-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 200px;
+}
+.computer-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 200px;
 }
 .icons{
     padding: 20px;
