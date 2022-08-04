@@ -5,28 +5,6 @@
 
 
 
-function getComputerChoice(){
-   let computerSelection = Math.floor( Math.random() * (4-1) + 1);   
-
-   
-    if(computerSelection === 1){
-        computerSelection = "rock";
-    }
-    else if(computerSelection === 2){
-        computerSelection = "paper";
-    }
-    else{
-        computerSelection = "scissors";
-    }
-    return computerSelection;
-    
-}
-
-
-
-
-
-
 //Player will select the option here which will be converted to lower case
 function getPlayerSelection()
 {
@@ -35,15 +13,30 @@ function getPlayerSelection()
     return playerSelection;
 }
 
-console.log(`Player selection is ${getPlayerSelection()}`);
-console.log(`Computer selection is ${getComputerChoice()}`);
 
+//To get the computer selection based on the math function
+function getComputerChoice(){
 
-// Function of the game logic using if loop
+    let computerSelection = Math.floor( Math.random() * (4-1) + 1);   
 
+    if(computerSelection === 1){
+         computerSelection = "rock";
+     }
+     else if(computerSelection === 2){
+         computerSelection = "paper";
+     }
+     else{
+         computerSelection = "scissors";
+     }
+     return computerSelection;     
+ }
 
+//This gets the selection of both user and computer and then decides the game
 function getWinner(playerSelection,computerSelection)
 {
+    console.log('Player Selection :', playerSelection);
+    console.log('Computer Selection : ', computerSelection);
+
     if(playerSelection === computerSelection)
     {
         console.log("Its a draw");
@@ -61,7 +54,7 @@ function getWinner(playerSelection,computerSelection)
             playerScore++;
         }
     }
-    else if(playerSelection === "scissors"){
+    else if(playerSelection === "scissors" || playerSelection === "scissor" ){
         if(computerSelection === "paper")
         {
             console.log("You Win! Scissors beats Paper");
@@ -74,29 +67,37 @@ function getWinner(playerSelection,computerSelection)
             computerScore++;
         }
     }
-    
-    console.log(`Player Score : ${playerScore}`);
-    console.log(`Computer Score : ${computerScore}`);
+    console.log('Player Score :', playerScore);
+    console.log('Computer Score : ', computerScore);   
 }
 
-function game(){
-    for(let i=0;i>5;i++)
-    {
-        playRound();
-    }
-    
-}
+//This function is called to play a round of game
 function playRound(){
     playerSelection = getPlayerSelection();
     computerSelection = getComputerChoice();
     getWinner(playerSelection,computerSelection);
 }
 
+//To loop the game 5 times
+function game(){
+    for(let i=0;i<5;i++)
+    {
+        playRound();
+    }
+    if(playerScore> 2)
+    {
+        console.log("You win the game");
+    }
+    else if(computerScore> 2)
+    {
+        console.log("Computer wins the game");
+    }
+    else{
+        console.log("No one won the game");
+    }
+}
+
+
 let computerScore = 0;
 let playerScore = 0;
 game();
-//console.log( playRound());
-//Function to run the game 5 times using for loop
-
-//
-

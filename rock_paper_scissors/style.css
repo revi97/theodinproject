@@ -1,45 +1,5 @@
 body{
+    background-color: black;
+    color: #c9c0c0d8;
     text-align: center;
-}
-.heading{
-    display: inline-flex;
-    justify-items: center;
-    
-}
-.heading>img{
-    width: 60px;
-    padding:5px 20px ;
-}
-.all-options{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-.user-options{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-#choice{
-    border: none;
-    background: none;
-
-}
-#choice:hover{
-    border: none;
-    transform: scale(1.3);
-}
-.computer-options{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 200px;
-}
-.icons{
-    padding: 20px;
-}
-.images{
-    width: 80px;
 }
