@@ -52,8 +52,8 @@ function getWinner(playerSelection,computerSelection)
       //  console.log("Its a draw");
       results.textContent = "It's a draw";
     }
-    else if(playerSelection === "1"){
-        if(computerSelection === "2")
+    else if(playerSelection == 1){
+        if(computerSelection == 2)
         {
            console.log("You Lose! Paper beats Rock");
            
@@ -61,26 +61,50 @@ function getWinner(playerSelection,computerSelection)
             results.textContent = `You Lose! Paper beats Rock. Computer Score: ${computerScore} and Player score: ${playerScore}`;
 
         }
-        else
+        else if(computerSelection == 3)
         {
            console.log("You Win! Rock beats Scissors");
             playerScore++;
             results.textContent = `You Win! Rock beats Scissors. Computer Score: ${computerScore} and Player score: ${playerScore}`;
         }
+        else{
+            results.textContent = `It's a draw. Computer Score: ${computerScore} and Player score: ${playerScore}` ;
+        }
     }
-    else if(playerSelection === "3" ){
-        if(computerSelection === "2")
+    else if(playerSelection == 2 ){
+        if(computerSelection == 1)
+        {
+            console.log("You Win! Paper beats Rock");
+            playerScore++;
+            results.textContent = `You Win! Scissors beats Paper. Computer Score: ${computerScore} and Player score: ${playerScore}`;
+
+        }
+        else if(computerSelection == 3)
+        {
+            console.log("You Lose! Scissors beats Paper");
+            computerScore++;
+            results.textContent = `You Lose! Scissors beats Paper. Computer Score: ${computerScore} and Player score: ${playerScore}`;
+        }
+        else{
+            results.textContent = `It's a draw. Computer Score: ${computerScore} and Player score: ${playerScore}`;
+        }
+    }
+    else if(playerSelection == 3 ){
+        if(computerSelection == 2)
         {
             console.log("You Win! Scissors beats Paper");
             playerScore++;
             results.textContent = `You Win! Scissors beats Paper. Computer Score: ${computerScore} and Player score: ${playerScore}`;
 
         }
-        else
+        else if(computerSelection == 1)
         {
             console.log("You Lose! Rock beats Scissors");
             computerScore++;
             results.textContent = `You Lose! Rock beats Scissors. Computer Score: ${computerScore} and Player score: ${playerScore}`;
+        }
+        else{
+            results.textContent = `It's a draw. Computer Score: ${computerScore} and Player score: ${playerScore}`;
         }
     }
    // console.log('Player Score :', playerScore);

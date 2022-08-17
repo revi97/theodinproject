@@ -3,3 +3,22 @@ body{
     color: #c9c0c0d8;
     text-align: center;
 }
+.options{
+    display: flex;
+    align-items: center;
+   justify-content: space-around;
+   margin: 10px 350px;
+}
+button{
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 150px;
+}
+button:hover{
+    transform: scale(1.2);
+}
+img{
+    width: 50px;
+    padding: 10px;
+    border: none;
+}
