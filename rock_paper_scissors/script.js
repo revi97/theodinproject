@@ -6,6 +6,9 @@
 
 
 const selected = document.querySelectorAll('button');
+const player_selection = document.querySelector('.container');
+const comp_selection = document.querySelector('.contains');
+const results = document.querySelector('.results');
 
 //To get the clicks of the buttons we will be using this 
 selected.forEach(button => { button.addEventListener('click', getPlayerSelection)})
@@ -47,31 +50,37 @@ function getWinner(playerSelection,computerSelection)
     if(playerSelection === computerSelection)
     {
       //  console.log("Its a draw");
+      results.textContent = "It's a draw";
     }
-    else if(playerSelection === "rock"){
-        if(computerSelection === "paper")
+    else if(playerSelection === "1"){
+        if(computerSelection === "2")
         {
-           // console.log("You Lose! Paper beats Rock");
+           console.log("You Lose! Paper beats Rock");
+           
             computerScore++;
+            results.textContent = `You Lose! Paper beats Rock. Computer Score: ${computerScore} and Player score: ${playerScore}`;
 
         }
         else
         {
-           // console.log("You Win! Rock beats Scissors");
+           console.log("You Win! Rock beats Scissors");
             playerScore++;
+            results.textContent = `You Win! Rock beats Scissors. Computer Score: ${computerScore} and Player score: ${playerScore}`;
         }
     }
-    else if(playerSelection === "scissors" || playerSelection === "scissor" ){
-        if(computerSelection === "paper")
+    else if(playerSelection === "3" ){
+        if(computerSelection === "2")
         {
-            //console.log("You Win! Scissors beats Paper");
+            console.log("You Win! Scissors beats Paper");
             playerScore++;
+            results.textContent = `You Win! Scissors beats Paper. Computer Score: ${computerScore} and Player score: ${playerScore}`;
 
         }
         else
         {
-            //console.log("You Lose! Rock beats Scissors");
+            console.log("You Lose! Rock beats Scissors");
             computerScore++;
+            results.textContent = `You Lose! Rock beats Scissors. Computer Score: ${computerScore} and Player score: ${playerScore}`;
         }
     }
    // console.log('Player Score :', playerScore);
@@ -94,9 +103,15 @@ function getPlayerSelection()
 {    
     let playerSelected = this.id;
    // console.log(playerSelected);
+   player_selection.textContent = `Player Selection: ${playerSelected}`;
     let compChoice = getComputerChoice();
+    comp_selection.textContent = `Computer Selection: ${compChoice}`;
     playRound(playerSelected,compChoice);
+
 }
+
+
+
 //playRound();
 let computerScore = 0;
 let playerScore = 0;
