@@ -1,24 +1,36 @@
-body{
-    background-color: black;
-    color: #c9c0c0d8;
-    text-align: center;
+body {
+  background-color: rgb(32, 32, 32);
+  color: #ffffff;
+  text-align: center;
 }
-.options{
-    display: flex;
-    align-items: center;
-   justify-content: space-around;
-   margin: 10px 350px;
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 350px;
 }
-button{
-    border-radius: 10px;
-    background-color: aliceblue;
-    width: 150px;
+button {
+  border-radius: 10px;
+  background-color: aliceblue;
+  width: 150px;
 }
-button:hover{
+button:hover {
+  transform: scale(1.2);
+}
+img {
+  width: 50px;
+  padding: 10px;
+  border: none;
+}
+#reset{
+    width: 500px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 700;
+}
+#reset:hover{
     transform: scale(1.2);
 }
-img{
-    width: 50px;
-    padding: 10px;
-    border: none;
+.announce {
+  font-size: 40px;
 }
