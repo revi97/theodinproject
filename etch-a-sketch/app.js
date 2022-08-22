@@ -1,8 +1,16 @@
 const grids = document.querySelector(".grids");
 const gridSize = document.querySelector("#askUser");
 let gridValue = gridSize.addEventListener("click", promtUser);
-const gridPixel = document.querySelector('.grid-item');
-let root = document.querySelector(':root');
+let root = document.querySelector(":root");
+let changeColor ;
+
+function change(){
+  for(i = 0; i< changeColor.length; i++){
+    changeColor.addEventListener("mouseleave", function (event){
+      event.target.style.backgroundColor = "black";
+    }, false);
+  }
+}
 
 
 function makeRows(rows, cols) {
@@ -19,25 +27,27 @@ function makeRows(rows, cols) {
 function promtUser() {
   Uservalue = prompt("What is the size you want the grid to be? (Max 100)");
   grids.innerHTML = "";
-  if(Uservalue > 100 || Uservalue < 1){
+  if (Uservalue > 100 || Uservalue < 1) {
     promtUser();
     grids.innerHTML = "";
   }
   makeRows(Uservalue, Uservalue);
- 
 }
 
-function setWidth(Uservalue)
-{
-  widthValue = 600/Uservalue;
-  console.log('Grid :', widthValue);
-  let nodes = document.querySelectorAll('.grid-item')
-  console.log(document.querySelectorAll('.grid-item').length);
-  for(i= 0 ; i< document.querySelectorAll('.grid-item').length; i++)
-  {
-    nodes[i].style.width = ('--grid-width', widthValue + 'px');
-    nodes[i].style.height = ('--grid-width', widthValue + 'px');
-    console.log(i);
+function setWidth(Uservalue) {
+  widthValue = 600 / Uservalue;
+  let nodes = document.querySelectorAll(".grid-item");
+  changeColor = nodes;
+  console.log(changeColor);
+  //console.log(changeColor.length);
+  for (i = 0; i < document.querySelectorAll(".grid-item").length; i++) {
+    nodes[i].style.width = ("--grid-width", widthValue + "px");
+    nodes[i].style.height = ("--grid-width", widthValue + "px");
   }
-
 }
+
+
+change();
+/*let changeColor = document.querySelectorAll(".grid-item").length; */
+//console.log(changeColor);
+
