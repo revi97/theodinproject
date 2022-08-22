@@ -2,15 +2,7 @@ const grids = document.querySelector(".grids");
 const gridSize = document.querySelector("#askUser");
 let gridValue = gridSize.addEventListener("click", promtUser);
 let root = document.querySelector(":root");
-let changeColor ;
-
-function change(){
-  for(i = 0; i< changeColor.length; i++){
-    changeColor.addEventListener("mouseleave", function (event){
-      event.target.style.backgroundColor = "black";
-    }, false);
-  }
-}
+const resetGrid = document.querySelector("#resetGrid");
 
 
 function makeRows(rows, cols) {
@@ -38,16 +30,15 @@ function setWidth(Uservalue) {
   widthValue = 600 / Uservalue;
   let nodes = document.querySelectorAll(".grid-item");
   changeColor = nodes;
-  console.log(changeColor);
-  //console.log(changeColor.length);
   for (i = 0; i < document.querySelectorAll(".grid-item").length; i++) {
     nodes[i].style.width = ("--grid-width", widthValue + "px");
     nodes[i].style.height = ("--grid-width", widthValue + "px");
+    nodes[i].addEventListener('mouseover', function(e){
+      this.style.backgroundColor = 'black';
+    })
   }
 }
 
-
-change();
-/*let changeColor = document.querySelectorAll(".grid-item").length; */
-//console.log(changeColor);
-
+resetGrid.addEventListener('click',function(){
+  grids.innerHTML = "";
+})

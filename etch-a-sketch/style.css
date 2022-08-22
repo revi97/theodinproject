@@ -14,15 +14,22 @@ h1 {
   text-align: center;
   align-self: center;
 }
-#askUser {
+.btns{
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.btn-style{
   border: none;
   background-color: #629098;
   padding: 10px;
+  margin: 5px 20px;
   border-radius: 5px;
   color: #ffe7cd;
   justify-content: center;
 }
-#askUser:hover {
+.btn-style:hover {
   transform: scale(1.2);
   padding: 15px;
 }
@@ -32,8 +39,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 660px;
-  height: 660px;
+  width: 600px;
+  height: 600px;
+  padding: 0;
+  background-color: rgba(217, 219, 221, 0.993);
 }
 .grids {
   display: grid;
@@ -49,7 +58,7 @@ h1 {
 
 .grid-item {
   margin: 0;
-  background-color: aliceblue;
+  background-color: #fff;
   align-self: center;
   justify-self: center;
   padding: 0;
