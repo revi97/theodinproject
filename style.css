@@ -32,5 +32,19 @@ b>a:hover{
 }
 .projects a:hover{
     color:  #1f2937;
-    background-color: #e5e7eb ;
+    background-color: #b8c0ff ;
+    transition: all 1s;
+}
+.code{
+    color: #e5e7eb;
+    background-color: #1f2937;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 1s;
+}
+.code:hover{
+    color:  #1f2937;
+    background-color: #b8c0ff ;
+    transition: all 1s;
 }

@@ -4,7 +4,6 @@ let gridValue = gridSize.addEventListener("click", promtUser);
 let root = document.querySelector(":root");
 const resetGrid = document.querySelector("#resetGrid");
 
-
 function makeRows(rows, cols) {
   grids.style.setProperty("--grid-rows", rows);
   grids.style.setProperty("--grid-cols", cols);
@@ -33,12 +32,12 @@ function setWidth(Uservalue) {
   for (i = 0; i < document.querySelectorAll(".grid-item").length; i++) {
     nodes[i].style.width = ("--grid-width", widthValue + "px");
     nodes[i].style.height = ("--grid-width", widthValue + "px");
-    nodes[i].addEventListener('mouseover', function(e){
-      this.style.backgroundColor = 'black';
-    })
+    nodes[i].addEventListener("mouseover", function (e) {
+      this.style.backgroundColor = "black";
+    });
   }
 }
 
-resetGrid.addEventListener('click',function(){
+resetGrid.addEventListener("click", function () {
   grids.innerHTML = "";
-})
+});

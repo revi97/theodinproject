@@ -14,13 +14,12 @@ h1 {
   text-align: center;
   align-self: center;
 }
-.btns{
+.btns {
   align-items: center;
   display: flex;
   justify-content: space-evenly;
-
 }
-.btn-style{
+.btn-style {
   border: none;
   background-color: #629098;
   padding: 10px;
